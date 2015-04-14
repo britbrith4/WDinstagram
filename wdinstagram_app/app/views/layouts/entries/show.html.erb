@@ -1,0 +1,9 @@
+<h2><%= @entires.author %></h2>
+<p> <%= @entries.date_taken %></p>
+<a href="http://www.<%= @entry.url%>">Website</a>
+
+<a href="/entries/<%=@entry.id%>/edit">Update This Entry</a>
+
+<%= form_tag entry_path(@entry), method: "delete" do %>
+  <%= submit_tag("destroy") %>
+<% end %>

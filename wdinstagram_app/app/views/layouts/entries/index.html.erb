@@ -1,0 +1,11 @@
+<h1>WDI Instagram</h1>
+
+<ul>
+  <% @entries.each do |entry| %>
+  <li> Author: <a href="/entries/<%= entry.id %>"
+    <%=entries.author%> </a> </li>
+    Date: "<%=entry.date_taken %>"
+  <% end %>
+</ul>
+
+<a href="/entry/new"> Add Entry </a>
